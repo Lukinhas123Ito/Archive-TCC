@@ -1,11 +1,14 @@
+//Javascript
 $(document).ready(function(){
 
-    $('#cad').click(function(event){
 
-        //Colect data with form
-        event.preventDefault();
+    $('.cad').click(function(event){
 
-        //The form in general
+        // Colect data written in we form
+    
+        event.preventDefault()
+        //take all data in form
+        
         var da = $('#form').serialize();
 
         console.log(da);
@@ -29,18 +32,21 @@ $(document).ready(function(){
                 url: '../Model/index.php',
                 success: function(da){
                 $('#res').append(`
-                 <tr> 
-                  <td>${da.name}</td>
-                  <td>${da.email}</td>
-                  <td>${da.cell}</td>
-                  <td>${da.pass}</td>
+                 
+                  <p>${da.name}</p>
+                  <p>${da.email}</p>
+                  <p>${da.cell}</p>
+                  <p>${da.pass}</p>
                  </tr>`)
                 }
              })
         }
-
-
+        
+        
+    
+    
     })
-
-
-})
+    
+    
+    }
+    )
