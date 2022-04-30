@@ -27,20 +27,25 @@
     <div class="container">
 
     <!-- Form test for Crud -->
-    <form action="../Model/index.php" class="datas" method="post">
+    <form action="../Model/index.php" class="form" id="form" method="post">
 
         <!--Name-->
         <input type="text" name="nome" id="nome">
         <!--Email-->
         <input type="text" name="email" id="email">
         <!--Tellphone-->
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="cell" id="cell">
         <!--Password-->
         <input type="password" name="pass" id="pass">
+        <!--Button to Register-->
+        <button class="cad" id="cad" type="submit"> Cadastrar </button>
+       
 
     </form>
 
     </div>
+
+    <div id="res"></div>
     
     <!--Execute to Javascript to Model-->
     <script src="../Control/Javascript/index.js"></script>
