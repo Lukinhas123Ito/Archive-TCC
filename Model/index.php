@@ -1,5 +1,8 @@
 <?php
 
+include('connect.php');
+
+
 $name = $_REQUEST['nome'];
 $email = $_REQUEST['email'];
 $cell = $_REQUEST['cell'];
@@ -15,6 +18,6 @@ $dados = array(
 "pass" => $pass
             );
 
-            echo json_encode($dados);
+echo json_encode($dados);
 
 ?>
