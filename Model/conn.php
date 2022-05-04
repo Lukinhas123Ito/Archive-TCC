@@ -6,8 +6,6 @@ $user ="root";
 $pass ="bil0u!@#";
 
 
-
-
 try{
     $conn = new PDO("mysql:host=$name;dbname=$dbname",$user,$pass );
 
