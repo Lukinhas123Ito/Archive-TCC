@@ -2,8 +2,8 @@
 $(document).ready(function(){
 
 
+    //Create Part
     $('.cad').click(function(event){
-
         // Colect data written in we form
     
         event.preventDefault()
@@ -11,7 +11,7 @@ $(document).ready(function(){
         
         var da = $('#form').serialize();
 
-        console.log(da);
+        
 
         var name =  $('#nome').val();
         var email =  $('#email').val();
@@ -24,12 +24,13 @@ $(document).ready(function(){
             alert('Um dos Campos está vazil')
         }
         else{
+            console.log(da);
             $.ajax({
                 type: 'POST',
                 dataType: 'JSON',
                 assync: true,
                 data: da,
-                url: '../Model/index.php',
+                url: '../Model/Create.php',
                 success: function(da){
                 $('#res').append(`
                  
@@ -47,6 +48,40 @@ $(document).ready(function(){
     
     })
     
+    //Seach
+    $('.pes').click(function(event){
+        // Colect data written in we form
+    
+        event.preventDefault()
+        //take all data in form
+        
+        var da = $('#form').serialize();
+
+        var sel =  $('#sel').val();
+
+        if(sel == ""){
+            alert('Coloca-se Algo de pesquisa')
+        }
+
+        $.ajax({
+            type: 'POST',
+            dataType: 'JSON',
+            assync: true,
+            data: da,
+            url: '../Model/Select.php',
+            success: function(da){
+            $('#res').append(`
+              <p>${da.name}</p>
+              <p>${da.email}</p>
+              <p>${da.cell}</p>
+              <p>${da.pass}</p>
+             </tr>`)
+            }
+         })
+
+
+    }
+    );
     
     }
     )
