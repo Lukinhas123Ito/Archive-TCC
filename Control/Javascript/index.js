@@ -60,7 +60,7 @@ $(document).ready(function(){
         var sel =  $('#sel').val();
 
         if(sel == ""){
-            alert('Coloca-se Algo de pesquisa')
+            alert('então ele é')
         }
 
         $.ajax({
@@ -71,7 +71,7 @@ $(document).ready(function(){
             url: '../Model/Select.php',
             success: function(da){
             $('#res').append(`
-            ${da.name}
+            ${da.row}
               `)
             }
          })
