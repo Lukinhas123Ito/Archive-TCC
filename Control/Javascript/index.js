@@ -71,11 +71,8 @@ $(document).ready(function(){
             url: '../Model/Select.php',
             success: function(da){
             $('#res').append(`
-              <p>${da.name}</p>
-              <p>${da.email}</p>
-              <p>${da.cell}</p>
-              <p>${da.pass}</p>
-             </tr>`)
+            ${da.name}
+              `)
             }
          })
 
