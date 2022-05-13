@@ -10,13 +10,11 @@ $sql="SELECT * FROM test WHERE nm like '%$sel%'";
 $res = mysqli_query($conn,$sql);
 
 while($row = mysqli_fetch_assoc($res)){
-    echo $row['id'];
+    $dados = array(
+        "row" => $row['id'],);
+    
+    echo json_encode($dados);
 }
 
-$dados = array(
-    "row" => $row,
-    );
-
-echo json_encode($dados);
 
 ?>
