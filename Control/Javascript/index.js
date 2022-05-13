@@ -55,7 +55,7 @@ $(document).ready(function(){
         event.preventDefault()
         //take all data in form
         
-        var datas = $('#form').serialize();
+        var das = $('#form').serialize();
 
         var sel =  $('#sel').val();
 
@@ -67,11 +67,15 @@ $(document).ready(function(){
             type: 'POST',
             dataType: 'JSON',
             assync: true,
-            data: datas,
+            data: das,
             url: '../Model/Select.php',
             success: function(da){
             $('#res').append(`
-            ${datas.row}
+            <tr><td>${das.id}</td></tr>
+            <tr><td>${das.nm}</td></tr>
+            <tr><td>${das.em}</td></tr>
+            <tr><td>${das.num}</td></tr>
+            <tr><td>${das.pass}</td></tr>
               `)
             }
          })

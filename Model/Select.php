@@ -11,7 +11,12 @@ $res = mysqli_query($conn,$sql);
 
 while($row = mysqli_fetch_assoc($res)){
     $dados = array(
-        "row" => $row['id']);
+        "id" => $row['id'],
+        "nm" => $row['nm'],
+        "em" => $row['em'],
+        "num" => $row['num'],
+        "pass" => $row['pass']
+    );
     
     echo json_encode($dados);
 }
