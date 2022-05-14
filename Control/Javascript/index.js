@@ -69,13 +69,13 @@ $(document).ready(function(){
             assync: true,
             data: das,
             url: '../Model/Select.php',
-            success: function(da){
+            success: function(das){
             $('#res').append(`
-            <tr><td>${das.id}</td></tr>
-            <tr><td>${das.nm}</td></tr>
-            <tr><td>${das.em}</td></tr>
-            <tr><td>${das.num}</td></tr>
-            <tr><td>${das.pass}</td></tr>
+            <tr><td>${das.id}</td>
+            <td>${das.nm}</td>
+            <td>${das.em}</td>
+            <td>${das.num}</td>
+            <td>${das.pass}</td></tr>
               `)
             }
          })
