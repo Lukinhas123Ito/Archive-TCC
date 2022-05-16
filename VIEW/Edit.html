@@ -27,21 +27,37 @@
     <div class="container">
 
     <!-- Form test for Crud -->
-    <form class="form" id="form" method="post">
+    
+    <form class="edit" id="edit"  method="post">
 
-        <!--Seach-->
-        <input type="text" name="sel" id="sel">
+        <!--Id-->
+         <label for="">ID</label>
+        <input type="text" name="id" id="id">
 
-        <button class="pes" id="pes" type="submit"> banana </button>
+        <!--Name-->
+        <label for="">Nome</label>
+        <input type="text" name="nome" id="nome">
+
+        <!--Email-->
+        <label for="">email</label>
+        <input type="text" name="email" id="email">
+
+        <!--Tellphone-->
+        <label for="">cell</label>
+        <input type="text" name="cell" id="cell">
+
+        <!--Password-->
+        <label for="">Senha</label>
+        <input type="password" name="pass" id="pass">
+
+        <!--Button to Register-->
+        <button class="ed" id="ed" type="submit"> Cadastrar </button>
        
     </form>
 
     </div>
 
-
-    <table id="res">
-        <tr><td><a href="">Editar</a></td><td><a href="">Deletar</a></td></tr>
-    </table>
+    <div id="res"></div>
     
     <!--Execute to Javascript to Model-->
     <script src="../Control/Javascript/index.js"></script>
