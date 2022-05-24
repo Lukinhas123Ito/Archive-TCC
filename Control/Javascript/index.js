@@ -52,40 +52,23 @@ $(document).ready(function(){
     //Seach
     $('.pes').click(function(event){
         // Colect data written in we form
-        var b = 0
+
         event.preventDefault()
         //take all data in form
         
-        var das = $('#form').serialize();
-
-        var sel =  $('#sel').val();
-
-        if(sel == ""){
-            alert('então ele é')
-        }
-
-        $.ajax({
-            type: 'POST',
-            dataType: 'JSON',
-            assync: true,
-            data: das,
-            url: '../Model/Select.php',
-            success: function(das){       
-                    $('#res').append(`
-                    <tr><td>${das.id['id']}</td>
-                    <td>${das.nm['nm']}</td>
-                    <td>${das.em['em']}</td>
-                    <td>${das.num['num']}</td>
-                    <td>${das.pass['pass']}</td></tr>
-                      `)
-                
-           
-            }
-         })
-
-
     }
-    );
+    )
     
+    //Editar
+    $('ed').click(function(event){
+
+        event.preventDefault()
+        //take all data in form
+        
+        var datass = $('#lb').serialize();
+        
+
+    })
+
     }
     )
