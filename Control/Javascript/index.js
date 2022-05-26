@@ -50,15 +50,20 @@ $(document).ready(function(){
     })
     
     //Seach
-    $('.pes').click(function(event){
-        // Colect data written in we form
+ 
+    $('#sea').keypress(function(event){
 
-        event.preventDefault()
-        //take all data in form
-        
-    }
-    )
-    
+        $.ajax({
+            type:'POST',
+            url:'../Model/Select.php',
+            data:{sea:$('#sea').val()},
+            success: function(data){
+                $('#res').html(data);
+            }
+
+        })
+    })
+
     //Editar
     $('ed').click(function(event){
 
