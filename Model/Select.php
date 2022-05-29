@@ -13,6 +13,7 @@ $res = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_assoc($res)){
     
     echo "
+    
     <tr name="."line".$row['id']." id="."line".$row['id'].">
     
         <td name="."id".$row['id']." id="."id".$row['id'].">".$row['id']."</td>
